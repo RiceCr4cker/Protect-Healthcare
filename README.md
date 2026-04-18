@@ -33,9 +33,9 @@ PVDV is a fictitious Belgian medical center member of a larger hospital group ca
 * **`full_report.pdf`:** Complete project documentation (46 pages). This document is in **French** as required by my academic curriculum.
 * **`TheCutestRansomware.txt`:** Malicious script in Flipper Zero/DuckyScript syntax (English). It injects keystrokes to write the ransomware and execute it.
 * **Demos:**
-    * `physical_breach.mp4`: Demonstration of social engineering and physical bypass (English).
-    * `bad-usb_ransomware_execution.mp4`: Live capture of the ransomware payload (English).
-    * `usbguard_and_disaster-recovery.mp4`: Quick demo of a defense with USBGuard + Wazuh Active Response and technical walk-through of the recovery process. Narrated in **French** for academic purposes.
+    * **`physical_breach.mp4`:** Demonstration of social engineering and physical bypass (English).
+    * **`bad-usb_ransomware_execution.mp4`:** Live capture of the ransomware payload (English).
+    * **`usbguard_and_disaster-recovery.mp4`:** Quick demo of a defense with USBGuard + Wazuh Active Response and technical walk-through of the recovery process. Narrated in **French** for academic purposes.
 
 ## 🛠️ Technical Stack
 * **EDR/SIEM:** `Wazuh`
