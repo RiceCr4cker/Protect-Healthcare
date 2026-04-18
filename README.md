@@ -1,4 +1,4 @@
-# Protect Healthcare
+# Protect-Healthcare
 
 This repository contains the comprehensive technical and governance documentation for a multi-layered cybersecurity "Protect" strategy. The project simulates a targeted attack on a medical clinic and implements advanced defense-in-depth countermeasures.
 
@@ -31,7 +31,7 @@ PVDV is a fictitious Belgian medical center member of a larger hospital group ca
 
 ## 📁 Repository contents
 * **`full_report.pdf`:** Complete project documentation (46 pages). This document is in **French** as required by my academic curriculum.
-* **TheCutestRansomware.txt:** Malicious script in Flipper Zero/DuckyScript syntax (English). It injects keystrokes to write the ransomware and execute it.
+* **`TheCutestRansomware.txt`:** Malicious script in Flipper Zero/DuckyScript syntax (English). It injects keystrokes to write the ransomware and execute it.
 * **Demos:**
     * `physical_breach.mp4`: Demonstration of social engineering and physical bypass (English).
     * `bad-usb_ransomware_execution.mp4`: Live capture of the ransomware payload (English).
